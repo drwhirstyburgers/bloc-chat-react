@@ -13,8 +13,8 @@ class RoomList extends Component {
 
   componentDidMount() {
     this.roomsRef.on('child_added', snapshot => {
-      console.log(snapshot);
-  });
+      this.setState({ rooms: this.state.rooms.concat( snapshot.val() ) });
+    });
   }
 
   render() {
