@@ -1,13 +1,19 @@
+.RoomList {
+  width: 300;
+}
+
 h2 {
   padding-top: 20px;
   margin-left: 20px;
   margin-top: 0;
   margin-bottom: 10px;
+  margin-right: 0;
 }
 
 li {
   list-style-type: none;
   margin-bottom: 5px;
+  margin-right: 0;
   text-indent: -20px;
 }
 

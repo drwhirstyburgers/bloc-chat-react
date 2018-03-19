@@ -36,7 +36,9 @@ class RoomList extends Component {
         <h2>Bloc Chat</h2>
         <ul id="room-list">
           {this.state.rooms.map( room =>
-          <li>{ room.name }</li>
+          <li key={room.key} >
+          <button onClick={ () => this.props.changeRoom(room) } >{ room.name }</button>
+          </li>
         )}
         </ul>
         <form onSubmit={ (e) => { e.preventDefault; this.createRoom(this.state.newRoom) } } className="create-room">
