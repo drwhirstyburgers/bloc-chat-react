@@ -41,7 +41,7 @@ class RoomList extends Component {
           </li>
         )}
         </ul>
-        <form onSubmit={ (e) => { e.preventDefault; this.createRoom(this.state.newRoom) } } className="create-room">
+        <form onSubmit={ (e) => { e.preventDefault(); this.createRoom(this.state.newRoom) } } className="create-room">
           <input id="text-field" type="text" value={ this.state.newRoom } onChange={ this.handleChange.bind(this) } placeholder="add a room!" />
           <input type="submit" value="add" />
         </form>
