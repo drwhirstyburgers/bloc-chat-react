@@ -4,7 +4,8 @@
 }
 
 aside {
-  height: 100%;
-  width: 20%;
+  height: 100vh;
+  width: 300px;
   background-color: rgb(181, 182, 183);
+  box-shadow: 5px 5px 8px 5px #888888;
 }
