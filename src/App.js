@@ -4,6 +4,7 @@ import './App.css';
 
 import RoomList from './components/RoomList.js';
 import MessageList from './components/MessageList.js';
+import User from './components/User.js'
 
 var config = {
   apiKey: "AIzaSyDacJU5_QpTYYKzDBjHdAFn0niyAUu4F_g",
@@ -19,8 +20,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeRoom: null
+      activeRoom: null,
+      user: null
     }
+  }
+
+  setUser(user) {
+    this.setState({ user: user });
   }
 
   changeRoom(room) {
@@ -32,6 +38,7 @@ class App extends Component {
       <div className="App">
         <aside align="left" id="sidebar">
           <RoomList firebase={firebase} activeRoom={this.state.activeRoom} changeRoom={this.changeRoom.bind(this)} />
+          <User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
         </aside>
         <section className="message-list">
           <main>
