@@ -42,7 +42,7 @@ class App extends Component {
         </aside>
         <section className="message-list">
           <main>
-            <MessageList firebase={firebase} activeRoom={this.state.activeRoom}/>
+            <MessageList firebase={firebase} activeRoom={this.state.activeRoom} user={this.state.user}/>
           </main>
         </section>
       </div>

@@ -28,3 +28,7 @@
 .user-info {
   font-weight: bold;
 }
+
+.create-message {
+  bottom: 0;
+}
